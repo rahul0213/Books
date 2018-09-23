@@ -8,11 +8,16 @@
 
 import UIKit
 
-class ViewController: UIViewController {
 
-    override func viewDidLoad() {
+class ViewController: UIViewController,GIDSignInUIDelegate
+{
+    
+   @IBOutlet weak var signInButton: GIDSignInButton!
+    @IBOutlet weak var btnCreateAccount: UIButton?
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+      GIDSignIn.sharedInstance().uiDelegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +25,8 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    
+    
+   
 }
 

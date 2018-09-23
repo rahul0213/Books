@@ -29,8 +29,13 @@ class BooksUITests: XCTestCase {
     }
     
     func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        XCUIDevice.shared.orientation = .portrait
+                // Use recording to get started writing UI tests.
+        
+        let app = XCUIApplication()
+        app.buttons["Log In"].tap()
+        app/*@START_MENU_TOKEN@*/.segmentedControls.buttons["Titles"]/*[[".segmentedControls.buttons[\"Titles\"]",".buttons[\"Titles\"]"],[[[-1,1],[-1,0]]],[1]]@END_MENU_TOKEN@*/.tap()
+                        // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
     
 }
